@@ -1,0 +1,64 @@
+<nav style="background-color: silver" class="navbar navbar-fixed navbar-static-top yamm ms-navbar ms-navbar-dark">
+    <div class="container container-full">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="http://www.siliconsoftwareservices.com/">
+                 <img style="height:55px;width:55px" src="../images/logo.png" alt=""> 
+                    <span ngcontent-vym-4 class="ms-title" style="font-size: 20px">Silicon
+
+                        <strong  style="color: blue">Software Services</strong>
+                    </span>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav"  style="float: right">
+                    <li class="dropdown {{businessTab}}" ng-click="navBar(1)">
+                        <a href="/#!/allQuestionsToAdmin" class="dropdown-toggle animated fadeIn animation-delay-6" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Questions</a>
+                    </li>
+                    <li class="dropdown {{assume}}" ng-click="navBar(2)">
+                        <a href="/#!/insert" class="dropdown-toggle animated fadeIn animation-delay-6" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add Questions</a>
+                    </li>
+
+                     <li class="dropdown {{assume}}" ng-click="navBar(3)">
+                        <a href="/#!/userdetailswithScore" class="dropdown-toggle animated fadeIn animation-delay-6" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Students Profile</a>
+                    </li>
+                     <li class="dropdown {{assume}}" ng-click="navBar(3)">
+                        <a href="/#!/sidedash" class="dropdown-toggle animated fadeIn animation-delay-6" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Students Report</a>
+                    </li>
+                    <li style="margin-top: 2%">
+                     <button style="float: right;" ng-click="logout()" class="btn btn-success pull-right blue-btn">Logout</button>
+                     </li>
+                </ul>
+            </div>
+            <a href="javascript:void(0)" class="sb-toggle-left btn-navbar-menu">
+                <i class="zmdi zmdi-menu"></i>
+            </a>
+        </div>
+    </nav>
+<div class="quizzler">
+<div class="viewport">
+<div class="scoring-section">
+
+    <header>
+        <div class="scoring-title">
+            <h1> All Users</h1>
+        </div>
+
+    </header> 
+
+
+    <div dir-paginate="user in allUsers | itemsPerPage: 5" class="score-item">
+
+        <div class="question">
+            <h3 ng-click="detaileduser(user.id)">
+                {{ user.id }}. {{ user.userName }}; score == {{user.score | number:2}}
+               
+            </h3>
+        </div>
+    </div>
+    <dir-pagination-controls style="padding-left: 35px" class="pull-right"
+            boundary-links="true" 
+            direction-links="true" >
+            </dir-pagination-controls>
+</div>
+</div>
+</div>

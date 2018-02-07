@@ -1,0 +1,34 @@
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+.row-canvas {
+    position:relative;
+    left: 0;
+}
+.easeout {
+    -webkit-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+        transition: all .25s ease-out;
+}
+.offcanvas {
+    overflow:hidden;
+    position: absolute;
+    width: 0%; /* 6 columns */
+    padding:0;
+    top:0;
+    margin:0;
+}
+
+.content-half {
+    padding-left:15px;
+}   
+
+.offcanvas-show {
+    width: 50%;
+}

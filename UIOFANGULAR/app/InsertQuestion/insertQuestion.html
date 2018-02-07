@@ -1,0 +1,135 @@
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+<nav style="background-color: silver" class="navbar navbar-fixed navbar-static-top yamm ms-navbar ms-navbar-dark">
+    <!-- ng-if="location.path() !== '/en-US/'" -->
+    <div class="container container-full">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="http://www.siliconsoftwareservices.com/">
+               <img style="height:55px;width:55px" src="../images/logo.png" alt=""> 
+               <span ngcontent-vym-4 class="ms-title" style="font-size: 20px">Silicon
+
+                <strong  style="color: blue">Software Services</strong>
+            </span>
+        </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav"  style="float: right">
+            <li class="dropdown {{businessTab}}" ng-click="navBar(1)">
+                <a href="/#!/allQuestionsToAdmin" class="dropdown-toggle animated fadeIn animation-delay-6" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Questions</a>
+            </li>
+            <li class="dropdown {{assume}}" ng-click="navBar(2)">
+                <a href="/#!/insert" class="dropdown-toggle animated fadeIn animation-delay-6" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add Questions</a>
+            </li>
+
+            <li class="dropdown {{assume}}" ng-click="navBar(3)">
+                <a href="/#!/userdetailswithScore" class="dropdown-toggle animated fadeIn animation-delay-6" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Students Profile</a>
+            </li>
+           <li class="dropdown {{assume}}" ng-click="navBar(3)">
+                <a href="/#!/sidedash" class="dropdown-toggle animated fadeIn animation-delay-6" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Students Report</a>
+            </li>
+            <li style="margin-top: 2%">
+                     <button style="float: right;" ng-click="logout()" class="btn btn-success pull-right blue-btn">Logout</button>
+                     </li>
+        </ul>
+    </div>
+    <a href="javascript:void(0)" class="sb-toggle-left btn-navbar-menu">
+        <i class="zmdi zmdi-menu"></i>
+    </a>
+</div>
+</nav>
+<div class= "quizzler">
+    <div class="viewportHeight">
+        <div class="quiz-section">
+            <header>
+               <div class="quiz-title">
+                <h1 style="color: green">Quiz Maker </h1>
+            </div> 
+        </header>
+        <div class="login-content">
+            <div class="section-title">
+                <h3>Insert the Questions and Choices</h3>
+                
+                <div class="login_messsage" ng-show="hasError">
+                    The username or password you entered was incorrect.
+                </div>
+            </div>
+            <form name="insert">
+
+               <div class="textbox-wrap" >
+
+                  <div class="form-group">
+                      <div class="input-group">
+                       <input type="text" ng-model="question.quizTitle"  class="form-control" required="true" placeholder="please the Quiz Title">
+                       <span class="input-group-addon">
+                          <i class="glyphicon glyphicon-user"></i>
+                      </span>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <div class="input-group">
+                   <input type="text" ng-model="question.duration"  class="form-control" required="true" placeholder="please enter duraton of this test">
+                   <span class="input-group-addon">
+                      <i class="glyphicon glyphicon-user"></i>
+                  </span>
+              </div>
+          </div>
+          
+          <div class="input-group">
+            <span class="input-group-addon ">
+                <i class="fa-question icon-color"></i>
+            </span>
+
+            <textarea type="text" ng-model="question.questionLine" ng-focus placeholder="please enter the question line" required="true" class="form-control" ></textarea>
+            <span class="field_msg"></span>
+        </div>
+    </div>
+    
+    <div class="textbox-wrap" >
+        
+        <div class="input-group">
+            <span class="input-group-addon ">
+                <i class="fa-question icon-color"></i>
+            </span>
+
+            <textarea type="text" ng-model="question.questions" ng-focus placeholder="please enter the question" required="true" class="form-control" ></textarea>
+            <span class="field_msg"></span>
+        </div>
+    </div>
+    <div class="textbox-wrap">
+        <div class="input-group">
+            <span class="input-group-addon ">
+                <i class="fa-circle-thin icon-color"></i>
+            </span>                                
+            <textarea type="text" ng-model="question.choices" ng-focus  class="form-control" required="true" placeholder="please enter the choices" ></textarea>
+            <span class="field_msg"></span>
+        </div>
+
+        <a data-ng-click="addChoice(question.choices)"class="btn btn-raised btn-success animated fadeInUp animation-delay-10">+</a>
+        <a data-ng-click="removeFormField($index)" class="btn btn-raised btn-danger animated fadeInUp animation-delay-10">- </a>
+        
+        
+    </div>
+
+    <div class="textbox-wrap">
+        <div class="input-group">
+            <span class="input-group-addon ">
+                <i class="fa-circle-thin icon-color"></i>
+            </span>                                
+            <textarea type="text" ng-model="question.answer" ng-focus  class="form-control" required="true" placeholder="please enter the answers" ></textarea>
+            <span class="field_msg"></span>
+        </div>
+
+        <a data-ng-click="addAnswers(question.answer)"class="btn btn-raised btn-success animated fadeInUp animation-delay-10">+</a>
+        <a data-ng-click="removeFormField($index)" class="btn btn-raised btn-danger animated fadeInUp animation-delay-10">- </a>           
+    </div>
+    <div class="login-form-action clearfix">
+        <button type="submit" ng-click="create(question)" class="btn btn-success pull-right green-btn">Create  &nbsp;
+        </button>
+    </div>
+</form>
+</div>
+</div>
+
+</div>
+</div>
+</div>

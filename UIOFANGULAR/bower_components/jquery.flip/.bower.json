@@ -1,0 +1,14 @@
+{
+  "name": "jquery.flip",
+  "homepage": "https://github.com/roncioso/Flip-jQuery",
+  "_release": "5f5d9a4c8b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5f5d9a4c8b0cf8cf94dad47f0fdbec9aa528cc49"
+  },
+  "_source": "https://github.com/roncioso/Flip-jQuery.git",
+  "_target": "*",
+  "_originalSource": "jquery.flip",
+  "_direct": true
+}

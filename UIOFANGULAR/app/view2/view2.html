@@ -1,0 +1,33 @@
+<a href="javascript:" id="return-to-top">
+  <i class="icon-chevron-up"></i>
+</a>
+<div id="div1" class="container">
+  <div style="float: right; margin-bottom: 2%" class="counter col_fourth">
+    <h3 class="timer count-title count-number" id="demo"></h3>
+    <p class="count-text">remaining seconds</p>
+  </div>
+  <div class="row">
+    <h1 style="color:blue"> Question No:{{id+1}}</h1>
+    <h3 style="padding: 1%;background-color: #03A9F4;color: white"> {{allDetails.questionLines}}</h3>
+    <div style="margin-top: -10px;padding-top: 0px;padding-bottom: 0px;background-color: black" class="jumbotron">
+      <code style="white-space: pre;background-color: black;color: white" id="myCode" readonly disabled> {{ allDetails.questions }}</code>
+    </div>
+    <div class="col-md-6">
+      <ul id="sortable" class="list-unstyled">
+        <li ng-repeat="choice in allDetails.choices track by $index">
+          <div class="checkbox">
+            <label style="font-size: 20px;">
+              <input style="font-size: 20px;" id="{{choice}}" type="checkbox" value="{{choice}}" ng-checked="selection.indexOf(choice) > -1" ng-click="toggleSelection(choice)"> {{choice}}
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix">
+      <button style="float: right;margin: 1%" ng-show="next" ng-click="next(choice)" class="btn btn-primary">continue  
+        <i class="icon-chevron-right"></i>
+      </button>
+      <button ng-show="!next" style="float: right;margin: 1%" ng-click="submit(choice)" class="btn btn-success pull-right green-btn">submit</button>
+    </div>
+  </div>

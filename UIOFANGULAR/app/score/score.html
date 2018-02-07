@@ -1,0 +1,181 @@
+<!-- <div class="quizzler">
+<div class="viewport">
+<div class="scoring-section">
+
+    <header>
+        <div class="scoring-title">
+            <h1>Quiz Scoring results:</h1>
+        </div>
+
+    </header>
+
+
+    <div class="score-results">
+        <h3>
+            Your quiz score is <span class="grade">{{ percentage | number:2 }}%</span> correct.
+        </h3>
+    </div>
+
+    <h2>
+        Below is a review of your answers to the questions in this quiz:
+    </h2>
+
+    <div ng-repeat="score in scores" class="score-item">
+
+        <div class="question">
+            <h3>
+                {{ score.index }}. {{ score.title }}
+            </h3>
+
+            <div ng-bind-html="score.details" class="details"></div>
+
+        </div>
+
+        <div ng-if="score.correct" class="answer correct">
+
+            <div class="expected">
+
+                <p><span class="title">Correct:</span></p>
+                <p>{{ score.expected }}</p>
+
+            </div>
+
+        </div>
+
+        <div ng-if="!score.correct" class="answer incorrect" >
+
+            <div class="given">
+
+                <p><span class="title">You answered incorrectly:</span></p>
+                <p>{{ score.answered }}</p>
+
+            </div>
+
+            <div class="expected">
+
+                <p><span class="title">Correct answer was:</span></p>
+                <p>{{ score.expected }}</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="next-action clearfix">
+        {{ email }}<button ng-click="logout()" class="btn btn-success pull-right blue-btn">Logout</button>
+    </div>
+
+</div>
+</div>
+</div>
+ -->
+
+
+
+ <section style="background:#efefe9;">
+        <div class="container">
+            <div class="row">
+                <div class="board">
+                    <!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
+                    <div class="board-inner">
+                    <ul class="nav nav-tabs" id="myTab">
+                    <div class="liner"></div>
+                     <li class="active">
+                     <a href="#home" data-toggle="tab">
+                      <span class="round-tabs one">  Score
+                              <i class="glyphicon glyphicon-ok"></i>
+                      </span> 
+                  </a></li>
+
+                  <!-- <li><a href="#profile" data-toggle="tab" title="profile">
+                     <span class="round-tabs two">
+                         <i class="glyphicon glyphicon-user"></i>
+                     </span> 
+           </a>
+                 </li>
+                 <li><a href="#messages" data-toggle="tab" title="bootsnipp goodies">
+                     <span class="round-tabs three">
+                          <i class="glyphicon glyphicon-gift"></i>
+                     </span> </a>
+                     </li>
+
+                     <li><a href="#settings" data-toggle="tab" title="blah blah">
+                         <span class="round-tabs four">
+                              <i class="glyphicon glyphicon-comment"></i>
+                         </span> 
+                     </a></li>
+
+                     <li><a href="#doner" data-toggle="tab" title="completed">
+                         <span class="round-tabs five">
+                              <i class="glyphicon glyphicon-ok"></i>
+                         </span> </a>
+                     </li>
+                     
+                     </ul> --></div>
+
+                     <div class="tab-content">
+                      <div class="tab-pane fade in active" id="home">
+
+                          <h3 class="head text-center">COMPLETED YOUR QUIZ </h3>
+                          <p class="narrow text-center">
+                              Are you got the excitement to views your score in this quiz!!!
+                          </p>
+                          
+                          <p class="text-center">
+                    <a href="" class="btn btn-success btn-outline-rounded green"> your score is    {{ percentage | number:2 }}% <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                </p>
+                      </div>
+
+        <button style="margin: 10%" ng-click="logout()" class="btn btn-success pull-right blue-btn">Logout</button>
+    
+                     <!--  <div class="tab-pane fade" id="profile">
+                          <h3 class="head text-center">Create a Bootsnipp<sup>™</sup> Profile</h3>
+                          <p class="narrow text-center">
+                              Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
+                          </p>
+                          
+                          <p class="text-center">
+                    <a href="" class="btn btn-success btn-outline-rounded green"> create your profile <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                </p>
+                          
+                      </div> -->
+                     <!--  <div class="tab-pane fade" id="messages">
+                          <h3 class="head text-center">Bootsnipp goodies</h3>
+                          <p class="narrow text-center">
+                              Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
+                          </p>
+                          
+                          <p class="text-center">
+                    <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                </p>
+                      </div> -->
+                     <!--  <div class="tab-pane fade" id="settings">
+                          <h3 class="head text-center">Drop comments!</h3>
+                          <p class="narrow text-center">
+                              Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
+                          </p>
+                          
+                          <p class="text-center">
+                    <a href="" class="btn btn-success btn-outline-rounded green"> {{ percentage | number:2 }}% <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                </p>
+                      </div> -->
+  <!--                     <div class="tab-pane fade" id="doner">
+  <div class="text-center">
+    <i class="img-intro icon-checkmark-circle"></i>
+</div>
+<h3 class="head text-center">thanks for staying tuned! <span style="color:#f48260;">♥</span> Bootstrap</h3>
+<p class="narrow text-center">
+  Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
+</p>
+</div> -->
+<!-- <div class="clearfix"></div> -->
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+                  

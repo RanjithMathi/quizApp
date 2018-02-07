@@ -1,0 +1,48 @@
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+<div style="height:2000px;">
+  
+  <h3>Scroll down</h3>
+  <h3><i class="icon-arrow-down"></i>
+  
+
+<div id="div1" class="container">
+<div style="float: right;" class="counter col_fourth">
+ <h2 class="timer count-title count-number" id="demo">  </h2>
+ <p class="count-text">remaining seconds</p>
+</div>
+   <div class="row">
+      <h3 style="padding: 1%;background-color: #03A9F4;"> {{id+1}}).{{allDetails.questionLines}}</h3>
+            
+           <div style="margin-top: -10px;padding-top: 0px;padding-bottom: 0px;background-color: silver"  class="jumbotron">
+              <code style="white-space: pre;background-color: silver" id="myCode" readonly disabled> {{ allDetails.questions }}</code>
+            </div>
+             <a ng-show="next" style="float: right;" class="btn btn-primary" ng-click="next(choice)" role="button">continue</a>
+            <div class="col-md-6">
+             <ul id="sortable" class="list-unstyled">
+              <li ng-repeat="choice in allDetails.choices track by $index">
+              <div class="checkbox">
+                            <label style="font-size: 20px;">
+                              <input style="font-size: 20px;" id="{{choice}}" type="checkbox" value="{{choice}}" ng-checked="selection.indexOf(choice) > -1" ng-click="toggleSelection(choice)"> {{choice}}</label>
+                        </div>
+              </li>
+              </ul> 
+              </div>
+              <gm-back-to-top gmspeed="1000"> </gm-back-to-top>
+               </div> 
+
+                 <div class="clearfix">
+<a scroll-to="#div1" offset="0" container="html, body">Go to element</a>
+
+             <a href="" id="back_top">Back to top</a>
+             
+            <!--  <a onclick="document.documentElement.scrollTop = 0;" >top</a> -->
+                  <!--   <button style="float: right;"  ng-click="next(choice)" class="btn btn-primary"> <a href="#top"> continue 33</a> </button>  -->
+
+                    <button ng-show="!next" ng-click="submit(choice)" class="btn btn-success pull-right green-btn">submit</button>
+                   
+    </div> 
+             
+           
+          
+</div>
+</div>

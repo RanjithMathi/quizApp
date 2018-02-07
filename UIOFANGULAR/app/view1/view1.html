@@ -1,0 +1,141 @@
+<body class="main">
+
+<div class="login-screen"></div>
+    <div class="login-center">
+        <div class="container min-height" style="margin-top: 20px;">
+        	<div class="row">
+                <div class="col-xs-4 col-md-offset-8">
+                    <div class="login" id="card">
+                    	<div class="front signin_form"> 
+                        <p>Login Your Account</p>
+                        <div class="login_messsage" ng-show="error">
+                The username or password you entered was incorrect.Are you forget the password?
+            </div>
+                          <form class="login-form">
+                              <div class="form-group">
+                                  <div class="input-group">
+                                     <input type="text" ng-model="user.username"  class="form-control" required="true" placeholder="please enter username">
+                                      <span class="input-group-addon">
+                                          <i class="glyphicon glyphicon-user"></i>
+                                      </span>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="input-group">
+                                      <input type="password" ng-model="user.password" class="form-control" placeholder="Type your password">
+                                      <span class="input-group-addon">
+                                          <i class="glyphicon glyphicon-lock"></i>
+                                      </span>
+                                  </div>
+                              </div>
+                              <div class="checkbox">
+                              <label><input type="checkbox">Remember me next time.</label>
+                              </div>
+                              
+                              <div class="form-group sign-btn">
+                                  <input type="submit" class="btn" ng-click="onLogin(user)" value="Log in">
+                                  <p><a href="#" class="forgot">Can't access your account?</a></p>
+                                  <p><strong>New to Silicon software Services?</strong><br><a href="#!signup" id="flip-btn" class="signup signup_link">Sign up for a new account</a></p>
+                              </div>
+                          </form>
+                        </div>
+                        <div class="back signup_form" style="opacity: 0;" ng-app ="myApp" ng-controller="registerController"> 
+                          <p>Sign Up for Your New Account</p>
+                          <form class="login-form">
+                <div class="form-group">
+                  <div class="input-group">
+                      <input type="text" ng-model="register.name"  placeholder="Name" required="true" class="form-control" >
+                     <span class="input-group-addon">
+                                          <i class="glyphicon glyphicon-user"></i>
+                                      </span>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <div class="input-group">
+                      <input type="number" ng-model="register.rollNo"  placeholder="University rollno " required="true" class="form-control" >
+                     <span class="input-group-addon">
+                                          <i class="glyphicon glyphicon-user"></i>
+                                      </span>
+                  </div>
+              </div>
+              
+              <div class="form-group">
+                  <div class="input-group">
+                      <input type="text" ng-model="register.collegeName"  placeholder="College name" required="true" class="form-control" >
+                     <span class="input-group-addon">
+                                          <i class="glyphicon glyphicon-user"></i>
+                                      </span>
+                  </div>
+              </div>
+              
+              <div class="form-group">
+                  <div class="input-group">
+                  <select style="color:blue" ng-model="register.department" placeholder="Department" required="true"  ng-options="x for x in departments" class="form-control">
+</select>
+                     <!--  <input type="text" ng-model="register.department"  placeholder="Department" required="true" class="form-control" > -->
+                     <span class="input-group-addon">
+                                          <i class="glyphicon glyphicon-user"></i>
+                                      </span>
+                  </div>
+              </div>
+
+               <div class="form-group">
+                                  <div class="input-group">
+                                      <input type="email" class="form-control" ng-model="register.email" placeholder="Email">
+                                      <span class="input-group-addon">
+                                          <i class="glyphicon glyphicon-envelope"></i>
+                                      </span>
+                                  </div>
+                              </div>
+
+                                <div class="form-group">
+                                  <div class="input-group">
+                                      <input type="tel" class="form-control" ng-model="register.phoneNumber" placeholder="phone">
+                                      <span class="input-group-addon">
+                                          <i class="glyphicon glyphicon-envelope"></i>
+                                      </span>
+                                  </div>
+                              </div>
+
+
+             
+
+                              <div class="form-group">
+                                  <div class="input-group">
+                                      <input type="text" ng-model="register.userName" class="form-control" placeholder="Username" required="true"> 
+                                      <span class="input-group-addon">
+                                          <i class="glyphicon glyphicon-user"></i>
+                                      </span>
+                                  </div>
+                              </div>
+                             
+                              <div class="form-group">
+                                  <div class="input-group">
+                                      <input type="password" ng-model="register.password" class="form-control" placeholder="Password">
+                                      <span class="input-group-addon">
+                                          <i class="glyphicon glyphicon-lock"></i>
+                                      </span>
+                                  </div>
+                              </div>
+                             
+                              
+                              <div class="form-group sign-btn">
+                                  <input type="submit" class="btn" ng-click="onRegister(register)" value="Sign up">
+
+                                   <div class="login_messsage" ng-show="success">
+                "You have create a user successfully!"
+            </div>
+                                  <br><br>
+                                  <p>You have already Account So <a href="#" id="unflip-btn" class="signup">Log in</a></p>
+                              </div>
+                          </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    </body>
